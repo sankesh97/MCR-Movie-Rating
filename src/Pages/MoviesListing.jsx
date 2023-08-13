@@ -75,7 +75,9 @@ const MoviesListing = () => {
               </option>
             ))}
         </select>
-        <Link className='btn btn-dark'>Add a Movie</Link>
+        <Link className='btn btn-dark' to='/add-movie'>
+          Add a Movie
+        </Link>
       </div>
       <div className='row g-5 m-3'>
         {MoviesList &&

@@ -24,7 +24,18 @@ const MoviesProvider = ({ children }) => {
   );
 
   const AddMovie = (inputMovie) => {
-    const tempMovie = [...MoviesList, { ...inputMovie, id: uuidv4() }];
+    setMoviesList((prevState) => [
+      ...prevState,
+      {
+        ...inputMovie,
+        id: uuidv4(),
+        year: Number(inputMovie.year),
+        rating: Number(inputMovie.rating),
+        cast: inputMovie.cast.split(','),
+        genre: inputMovie.genre.split(','),
+        writer: inputMovie.writer.split(','),
+      },
+    ]);
   };
 
   //Search Functionality
@@ -84,6 +95,7 @@ const MoviesProvider = ({ children }) => {
         addToStarred,
         removeFromStarred,
         searchMovie,
+        AddMovie,
       }}
     >
       {children}

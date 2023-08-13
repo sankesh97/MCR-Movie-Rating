@@ -70,8 +70,8 @@ const MovieCard = ({ movie }) => {
                 (watchListmovie) =>
                   watchListmovie.id.toString() === movie.id.toString()
               )
-                ? 'Added to Wishlist'
-                : 'Add to Wishlist'}
+                ? 'Added to WatchList'
+                : 'Add to WatchList'}
             </button>
           </div>
         ) : null}

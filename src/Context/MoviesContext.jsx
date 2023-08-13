@@ -36,6 +36,7 @@ const MoviesProvider = ({ children }) => {
         writer: inputMovie.writer.split(','),
       },
     ]);
+    setGenreList((prevState) => [...prevState, ...inputMovie.genre.split(',')]);
   };
 
   //Search Functionality

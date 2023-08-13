@@ -93,7 +93,7 @@ const MoviesListing = () => {
             )
             .filter((movie) =>
               ManageFilter.rating !== 'Rating'
-                ? movie.rating.toString() >= ManageFilter.rating.toString()
+                ? Number(movie.rating) >= Number(ManageFilter.rating)
                 : true
             )
             .filter((movie) =>
